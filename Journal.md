@@ -12,3 +12,9 @@ extension, but closed for modification. We want to be able to modify the text in
 the component the source of the text by hardcoding it in there. When the BoldDecorator wraps the 
 UpperCaseDecorator, the UpperCaseDecorator references the TextComponent first and is applied to the plain text, then
 the BoldDecorator is applied to the plain text class.
+
+Phase 3
+We create a new object where the decorators extend the component, but the component itself is not modified.
+We wrap the plain text inside the decorators to apply external modification where the base class does not have
+to be changed everytime it is called. If we added an UnderlineDecorator the other classes wouldn't need to be
+modified. You only need to reference the text component in the constructor of the new decorator.
